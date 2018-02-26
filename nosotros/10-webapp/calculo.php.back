@@ -1,0 +1,70 @@
+<?php 
+
+session_start();
+
+if (isset($_POST['compradieselAnt1Lunes'], $_POST['stockDieselAnt1'], $_POST['ventaMedia'])) {
+    
+    $link = mysqli_connect("localhost", "cl20-pedidos", "BU.-47-en", "cl20-pedidos");
+    
+                    if (mysqli_connect_error()) {
+        
+                        die ("DB Connection error");
+
+                    }
+                
+    $query = "UPDATE `calculo` SET `stockd` = '".mysqli_real_escape_string($link, $_POST['stockDieselAnt1'])."', `ventad_media` = '".mysqli_real_escape_string($link, $_POST['ventaMedia'])."', `comprad_lunes` = '".mysqli_real_escape_string($link, $_POST['compradieselAnt1Lunes'])."', `comprad_martes` = '".mysqli_real_escape_string($link, $_POST['compradieselAnt1Martes'])."', `comprad_miercoles` = '".mysqli_real_escape_string($link, $_POST['compradieselAnt1Miercoles'])."', `comprad_jueves` = '".mysqli_real_escape_string($link, $_POST['compradieselAnt1Jueves'])."', `comprad_Viernes` = '".mysqli_real_escape_string($link, $_POST['compradieselAnt1Viernees'])."', `comprad_sabado` = '".mysqli_real_escape_string($link, $_POST['compradieselAnt1Sabado'])."', `comprad_domingo` = '".mysqli_real_escape_string($link, $_POST['compradieselAnt1Domingo'])."', `comprad_lunes2` = '".mysqli_real_escape_string($link, $_POST['compradieselAnt1Lunes2'])."', `id_semana` = '".date('W')."', `anio` = '".date('Y')."' ORDER BY `id` DESC LIMIT 1";                
+
+    mysqli_query($link, $query);
+  
+     
+    $calstockMartes = $_POST['compradieselAnt1Lunes'] + $_POST['stockDieselAnt1'] - $_POST['ventaMedia'] ;
+    
+    $caldiasMartes = ($calstockMartes - 500) / $_POST['ventaMedia'];
+    
+    $calstockMiercoles = $_POST['compradieselAnt1Martes'] +  $calstockMartes - $_POST['ventaMedia'] ;
+    
+    $caldiasMiercoles = ($calstockMiercoles - 500) / $_POST['ventaMedia'];
+    
+    $calstockJueves = $_POST['compradieselAnt1Miercoles'] + $calstockMiercoles - $_POST['ventaMedia'] ;
+    
+    $caldiasJueves = ($calstockJueves - 500) / $_POST['ventaMedia'];
+    
+    $calstockViernes = $_POST['compradieselAnt1Jueves'] + $calstockJueves - $_POST['ventaMedia'] ;
+    
+    $caldiasViernes = ($calstockViernes - 500) / $_POST['ventaMedia'];
+    
+    $calstockSabado = $_POST['compradieselAnt1Viernes'] + $calstockViernes - $_POST['ventaMedia'] ;
+    
+    $caldiasSabado = ($calstockSabado - 500) / $_POST['ventaMedia'];
+    
+    $calstockDomingo = $_POST['compradieselAnt1Sabado'] + $calstockSabado - $_POST['ventaMedia'] ;
+    
+    $caldiasDomingo = ($calstockDomingo - 500) / $_POST['ventaMedia'];
+    
+    $calstockLunes2 = $_POST['compradieselAnt1Domingo'] + $calstockDomingo - $_POST['ventaMedia'] ;
+    
+    $caldiasLunes2 = ($calstockLunes2 - 500) / $_POST['ventaMedia'];
+    
+    $calstockMartes2 = $_POST['compradieselAnt1Lunes2'] + $calstockLunes2 - $_POST['ventaMedia'] ;
+    
+    $caldiasMartes2 = ($calstockMartes2 - 500) / $_POST['ventaMedia'];
+    
+    //$arr = array('calstockMartes' => "$calstockMartes", 'caldiasMartes' => "$caldiasMartes");
+    
+    
+    
+    $query2 = "UPDATE `calculo` SET `stockd_martes` = '".$calstockMartes."', `diasd_martes` = '".$caldiasMartes."', `stockd_miercoles` = '".$calstockMiercoles."', `diasd_miercoles` = '".$caldiasMiercoles."', `stockd_jueves` = '".$calstockJueves."', `diasd_jueves` = '".$caldiasJueves."', `stockd_viernes` = '".$calstockViernes."', `diasd_viernes` = '".$caldiasViernes."', `stockd_sabado` = '".$calstockSabado."', `diasd_sabado` = '".$caldiasSabado."', `stockd_domingo` = '".$calstockDomingo."', `diasd_domingo` = '".$caldiasDomingo."', `stockd_lunes2` = '".$calstockLunes2."', `diasd_lunes2` = '".$caldiasLunes2."', `stockd_martes2` = '".$calstockMartes2."', `diasd_martes2` = '".$caldiasMartes2."' ORDER BY `id` DESC LIMIT 1";                
+
+    mysqli_query($link, $query2);
+    
+    //echo $calstockMartes;
+    
+    
+    
+}
+//$caldiasMartes = (100 - 500) / 10 ;
+
+//echo $caldiasMartes;
+//$caldiasMartes = ($_POST['stockDieselAnt1'] - 500) / $_POST['ventaMedia'] ;
+ 
+?>
