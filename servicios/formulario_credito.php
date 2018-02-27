@@ -247,9 +247,9 @@ tbody tr:nth-child(even) td {
 
   <div class="row justify-content-center mt-5">
   <div class="col-9">
-      <p class=" ">* Las tasas de interés vigentes sobre su crédito son las siguientes:</p>
-  </div>
-  </div>
+    <p class=" ">* Las tasas de interés vigentes sobre su crédito son las siguientes:</p>
+    </div>
+    </div>
 
     <div class="row justify-content-center mt-1">
     <div class="col-5">
@@ -309,10 +309,24 @@ tbody tr:nth-child(even) td {
   </div>
 
 
-        <div class= "col text-center cuenta-cliente">
+        <div class= "col mt-sm-3 text-center cuenta-cliente">
          <form class="form-inline justify-content-center" action="10-webapp/compras.php" method="post">
-           <label>Formulario Solicitud de Crédito</label>
-            <input type="submit" class="btn btn-primary" name="submit" value="consultar">
+            <label class="sr-only" for="inlineFormInput">RUC/CI</label>
+            <input type="text" class="form-control mb-2 mr-sm-3 mb-sm-2" name="nombre" id="inlineFormInput" placeholder="RUC/CI">
+
+            <label class="sr-only" for="inlineFormInputGroup">Fecha Inicial</label>
+            <div class="input-group mb-2 mr-sm-3 mb-sm-2">
+              <div class="input-group-addon">Incial</div>
+              <input type="date" class="form-control" name="fechaInicial" id="inlineFormInputGroup" value="2017/01/01">
+            </div>
+
+            <label class="sr-only" for="inlineFormInputGroup">Fecha Final</label>
+            <div class="input-group mb-2 mr-sm-3 mb-sm-2">
+              <div class="input-group-addon">Final</div>
+              <input type="date" class="form-control" name="fechaFinal" id="inlineFormInputGroup" value="<?php echo date('Y-m-d'); ?>">
+            </div>
+
+            <input type="submit" class="btn btn-primary mb-sm-2" name="submit" value="consultar">
           </form>
         </div>
       </div>
