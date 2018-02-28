@@ -50,6 +50,14 @@ $saldoAnterior = $row2['SUM(Haber)'] - $row2['SUM(Debe)'];
         background-color: #e0e0e0;
       }
 
+      .mdb-color-lighten-5 {
+        background-color: #d0d6e2;
+      }
+
+      .deep-orange-lighten-5 {
+        background-color: #fbe9e7;
+      }
+
       .cuenta-cliente {
         background-color: rgba(237, 237, 237, .8);
         padding-bottom: 2rem;
@@ -316,16 +324,39 @@ tbody tr:nth-child(even) td {
     </div>
   </div>
 
-  <div class='row align-items-center grey-lighten-2 p-3 mb-2'>
+  <div class='row align-items-center mdb-color-lighten-5 p-3 mb-2'>
     <div class= "col text-center">
-      <form class="form-inline justify-content-center" action="10-webapp/compras.php" method="post">
+    <ol>
+      <li>
+      Al momento de Solicitar Documentos, se descargaran dos archivos, por favor completar la informacion requerida.
+      </li>
+      <li>
+      Cuando los documentos se encuentren llenados y firmados correctamente, por favor escanearlos y enviarlos al correo secretariaempresaslua@hotmail.com o entregarlos en cualquiera de las oficinas de nuestras estaciones.
+      </li>
+    </ol>
+      <form class="form justify-content-center" action="descarga_formulario.php" method="post">
         <div class="form-group">
+          <input type="submit" class="btn btn-primary" name="descarga" value="Solicitar Documentos">
+        </div>
+      </form>
+      <h3>Gracias</h3>
+    </div>
+  </div>
 
-          <input type="submit" class="btn btn-primary" name="submit" value="Solicitar Formulario">
+<!--
+  <div class='row align-items-center deep-orange-lighten-5 p-3 mb-2'>
+    <div class= "col text-center">
+      <p>
+      Una vez completada la informacion, por favor escanear los dos documentos firmados o enviarlos al correo secretariaempresaslua@hotmail.com o entregarlos en cualquiera de las oficinas de nuestras estaciones.
+      </p>
+      <form class="form justify-content-center" action="upload.php" method="post">
+        <div class="form-group">
+          <input type="file" class="btn btn-primary" name="upload[]" multiple="multiple" placeholder="Enviar Documentos">
+          <input type="submit" class="btn btn-primary" name="enviar" value="Enviar Documentos">
         </div>
       </form>
     </div>
-  </div>
+  </div>-->
 
     </div>
 
