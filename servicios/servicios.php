@@ -37,10 +37,17 @@ $saldoAnterior = $row2['SUM(Haber)'] - $row2['SUM(Debe)'];
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Custom styles for this template -->
     <style>
       body {
         padding-top: 54px;
+      }
+
+      .grey-lighten-2 {
+        background-color: #e0e0e0;
       }
 
       .cuenta-cliente {
@@ -171,8 +178,6 @@ tbody tr:nth-child(even) td {
     <div class="container">
 
         <div class="col text-center" >
-          <!--<h1 class="mt-5">Garantia en Calidad y Cantidad</h1>-->
-
           <img src="../Petroecuador.png" class="img-fluid logo" alt="Petroecuador">
           <p class="lead"></p>
           <ul class="list-unstyled">
@@ -181,112 +186,112 @@ tbody tr:nth-child(even) td {
         </div>
 
         <div class='row'>
-        <div class= "col mt-sm-3 text-center cuenta-cliente">
-          <h2 class="mt-5">Solicitud de Crédito</h2>
-        </div>
+          <div class= "col mt-sm-3 text-center cuenta-cliente">
+            <h2 class="mt-5">Solicitud de Crédito</h2>
+          </div>
         </div>
 
         <div class="row justify-content-center">
-        <div class="col-9">
-          <p class="lead ">Por favor revisar la siguiente información:</p>
-          <p class="text">* Estimado cliente, para poder ofrecerle un servicio basado en la seguridad y confianza, solicitamos a usted muy comedidamente se sirva hacernos llegar los siguientes documentos:</p>
-        </div>
+          <div class="col-9">
+            <p class="lead ">Por favor revisar la siguiente información:</p>
+            <p class="text"><span class="fa fa-angle-right"></span> Estimado cliente, para poder ofrecerle un servicio basado en la seguridad y confianza, solicitamos a usted muy comedidamente se sirva hacernos llegar los siguientes documentos:</p>
+          </div>
         </div>
 
         <div class="row justify-content-center">
         <div class="col-5">
         <div id="accordion">
-<div class="card" style="width: 24rem;">
-  <div class="card-header" id="headingOne">
-    <h5 class="mb-0">
-      <button class="btn btn-link card-title" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Persona Natural
-      </button>
-    </h5>
-  </div>
+          <div class="card" style="width: 24rem;">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link card-title" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Persona Natural
+                </button>
+              </h5>
+            </div>
 
-  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-    <div class="card-body">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Copia de cédula de ciudadanía del solicitante</li>
-      <li class="list-group-item">Referencia Bancaria</li>
-      <li class="list-group-item">Cheque girado a nombre de Rene Vinicio Arteaga Lalama</li>
-      <li class="list-group-item">Letra de cambio</li>
-      <li class="list-group-item">RUC</li>
-    </ul>
-    </div>
-  </div>
-</div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Copia de cédula de ciudadanía del solicitante</li>
+                <li class="list-group-item">Referencia Bancaria</li>
+                <li class="list-group-item">Cheque girado a nombre de Rene Vinicio Arteaga Lalama</li>
+                <li class="list-group-item">Letra de cambio</li>
+                <li class="list-group-item">RUC</li>
+              </ul>
+              </div>
+            </div>
+          </div>
 
-<div class="card" style="width: 24rem;">
-  <div class="card-header" id="headingTwo">
-    <h5 class="mb-0">
-      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Persona Jurídica (Compañía)
-      </button>
-    </h5>
-  </div>
-  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-    <div class="card-body">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Documento de constitucion legal de la compañía</li>
-      <li class="list-group-item">Nombramiento del representante legal</li>
-      <li class="list-group-item">Copia de RUC actualizado de la empresa</li>
-      <li class="list-group-item">Copia de cédula de ciudadanía del representante legal</li>
-      <li class="list-group-item">Referencia bancaria</li>
-      <li class="list-group-item">Cheque girado a nombre de Rene Vinicio Arteaga Lalama</li>
-      <li class="list-group-item">Letra de cambio</li>
-    </ul>
-    </div>
-  </div>
-</div>
+          <div class="card" style="width: 24rem;">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Persona Jurídica (Compañía)
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Documento de constitucion legal de la compañía</li>
+                <li class="list-group-item">Nombramiento del representante legal</li>
+                <li class="list-group-item">Copia de RUC actualizado de la empresa</li>
+                <li class="list-group-item">Copia de cédula de ciudadanía del representante legal</li>
+                <li class="list-group-item">Referencia bancaria</li>
+                <li class="list-group-item">Cheque girado a nombre de Rene Vinicio Arteaga Lalama</li>
+                <li class="list-group-item">Letra de cambio</li>
+              </ul>
+              </div>
+            </div>
+          </div>
 
-</div>
-</div>
-</div>
+        </div>
+        </div>
+        </div>
 
   <div class="row justify-content-center mt-5">
-  <div class="col-9">
-      <p class=" ">* Las tasas de interés vigentes sobre su crédito son las siguientes:</p>
-  </div>
+    <div class="col-9">
+        <p class=" "><span class="fa fa-angle-right"></span> Las tasas de interés vigentes sobre su crédito son las siguientes:</p>
+    </div>
   </div>
 
     <div class="row justify-content-center mt-1">
     <div class="col-5">
-    <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Plazo</th>
-      <th scope="col">Tasa interés</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1. Semanal</td>
-      <td>1%</td>
-    </tr>
-    <tr>
-      <td>2. Quincenal</td>
-      <td>1.5%</td>
-    </tr>
-    <tr>
-      <td>3. Mensual</td>
-      <td>2%</td>
-    </tr>
-  </tbody>
-</table>
+      <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Plazo</th>
+                <th scope="col">Tasa interés</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1. Semanal</td>
+                <td>1%</td>
+              </tr>
+              <tr>
+                <td>2. Quincenal</td>
+                <td>1.5%</td>
+              </tr>
+              <tr>
+                <td>3. Mensual</td>
+                <td>2%</td>
+              </tr>
+            </tbody>
+      </table>
   </div>
   </div>
 
   <div class="row justify-content-center mt-2">
   <div class="col-9">
-    <p class="">* La empresa ofrece 7 días calendario de gracia (Cero interés) para el pago de sus planillas, a partir de la fecha convenidad de vencimiento de la planilla.</p>
+    <p class=""><span class="fa fa-angle-right"></span> La empresa ofrece 7 días calendario de gracia (Cero interés) para el pago de sus planillas, a partir de la fecha convenidad de vencimiento de la planilla.</p>
   </div>
   </div>
 
   <div class="row justify-content-center mt-2">
   <div class="col-9">
-    <p class="">* En caso de ser aprobado su crédito, deberá entregar garantías por el doble del monto solicitado:</p>
+    <p class=""><span class="fa fa-angle-right"></span> En caso de ser aprobado su crédito, deberá entregar garantías por el doble del monto solicitado:</p>
   </div>
   </div>
 
@@ -295,33 +300,40 @@ tbody tr:nth-child(even) td {
 
   </div>
   <div class="col-3">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cheque</li>
-    <li class="list-group-item">Letra de cambio</li>
-  </ul>
+    <ul>
+      <li class="">Cheque</li>
+      <li class="">Letra de cambio</li>
+    </ul>
+
   </div>
+
+
   </div>
 
   <div class="row justify-content-center mt-3">
-  <div class="col-9">
-    <p class="lead ">Cualquier inquietud que usted tenga al respecto, estaremos gustosos de atenderle al 02 374 0444 o al correo secretariaempresaslua@hotmail.com.</p>
-  </div>
+    <div class="col-9">
+      <p class="lead ">Cualquier inquietud que usted tenga al respecto, estaremos gustosos de atenderle al 02 374 0444 o al correo secretariaempresaslua@hotmail.com.</p>
+    </div>
   </div>
 
+  <div class='row align-items-center grey-lighten-2 p-3 mb-2'>
+    <div class= "col text-center">
+      <form class="form-inline justify-content-center" action="10-webapp/compras.php" method="post">
+        <div class="form-group">
 
-        <div class= "col text-center cuenta-cliente">
-         <form class="form-inline justify-content-center" action="10-webapp/compras.php" method="post">
-           <label>Formulario Solicitud de Crédito</label>
-            <input type="submit" class="btn btn-primary" name="submit" value="consultar">
-          </form>
+          <input type="submit" class="btn btn-primary" name="submit" value="Solicitar Formulario">
         </div>
-      </div>
+      </form>
+    </div>
+  </div>
+
     </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
 
   </body>
 

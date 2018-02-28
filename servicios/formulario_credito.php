@@ -309,9 +309,9 @@ tbody tr:nth-child(even) td {
   </div>
 
 
-        <div class= "col mt-sm-3 text-center cuenta-cliente">
+        <div class= "col text-center cuenta-cliente">
          <form class="form-inline justify-content-center" action="10-webapp/compras.php" method="post">
-            <label class="sr-only" for="inlineFormInput">RUC/CI</label>
+            <label class="" for="inlineFormInput">RUC/CI</label>
             <input type="text" class="form-control mb-2 mr-sm-3 mb-sm-2" name="nombre" id="inlineFormInput" placeholder="RUC/CI">
 
             <label class="sr-only" for="inlineFormInputGroup">Fecha Inicial</label>
@@ -326,8 +326,8 @@ tbody tr:nth-child(even) td {
               <input type="date" class="form-control" name="fechaFinal" id="inlineFormInputGroup" value="<?php echo date('Y-m-d'); ?>">
             </div>
 
-            <input type="submit" class="btn btn-primary mb-sm-2" name="submit" value="consultar">
-          </form>
+            <input type="submit" class="btn btn-primary mb-sm-2" name="submit" value="Solicitar Formulario">
+         </form>
         </div>
       </div>
     </div>
