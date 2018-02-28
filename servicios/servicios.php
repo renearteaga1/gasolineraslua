@@ -63,38 +63,11 @@ $saldoAnterior = $row2['SUM(Haber)'] - $row2['SUM(Debe)'];
         padding-bottom: 2rem;
         margin-bottom: 3rem;
       }
-      .fecha {
-          padding-right: 0;
-      }
+      
       .logo {
           transform: scale(.8);
       }
-      .debe {
-          width: 5rem;
-      }
-      .comentario {
-          padding-left: 0;
-      }
-      .comentario-mobile {
-          font-size: .8rem;
-      }
-
-      .card-margin {
-          margin: 10px;
-      }
-      .date {
-          font-size: .91rem;
-          font-weight: 500;
-          padding-bottom: .9rem;
-          color: #d59541;
-      }
-      .number-mobile {
-          font-size: 1rem;
-          font-weight: 500;
-      }
-      .saldo-final {
-          margin-top: 1.5rem;
-      }
+      
       /*
       table {
     border-collapse: collapse;
@@ -114,22 +87,7 @@ tbody tr:nth-child(even) td {
 		display: block;
 	}
 }*/
-        table{
-            margin-top:1.5rem;
-        }
-        .card-padd {
-            margin: 1.5rem;
-        }
-        .table-mobile th, .table-mobile td {
-             border-top: none !important;
-         }
-        .table-mobile tr {
-        background-color: rgba(242, 242, 242, .3);
-        }
-
-        .table-mobile tr:nth-child(4n+1), tr:nth-child(4n+2) {
-            background-color: rgba(229, 229, 229, .8);;
-        }
+        
       @media (max-width: 575px) {
           .logo {
             transform: scale(1);
@@ -137,24 +95,30 @@ tbody tr:nth-child(even) td {
             padding: 0;
             width: 21rem;
         }
-        .debe {
-            padding:0;
-        }
-        .comentario {
-
-            padding: 0;
-        }
+        
       }
+	  
+      @media (min-width: 576px) {
+        	.max-width {
+	
+				width: 24rem;
+			}
+		
+		}
+	  
       @media (min-width: 992px) {
         body {
           padding-top: 56px;
         }
+		
+		}
 
     </style>
 
   <body>
 
     <!-- Navigation -->
+	<div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="../index.php">GasolinerasLua S.A.</a>
@@ -181,16 +145,13 @@ tbody tr:nth-child(even) td {
         </div>
       </div>
     </nav>
+</div>
 
     <!-- Page Content -->
     <div class="container">
 
         <div class="col text-center" >
           <img src="../Petroecuador.png" class="img-fluid logo" alt="Petroecuador">
-          <p class="lead"></p>
-          <ul class="list-unstyled">
-            <li></li>
-          </ul>
         </div>
 
         <div class='row'>
@@ -200,16 +161,16 @@ tbody tr:nth-child(even) td {
         </div>
 
         <div class="row justify-content-center">
-          <div class="col-9">
+          <div class="col-md-9">
             <p class="lead ">Por favor revisar la siguiente información:</p>
             <p class="text"><span class="fa fa-angle-right"></span> Estimado cliente, para poder ofrecerle un servicio basado en la seguridad y confianza, solicitamos a usted muy comedidamente se sirva hacernos llegar los siguientes documentos:</p>
           </div>
         </div>
 
-        <div class="row justify-content-center">
-        <div class="col-5">
+        <div class="row text-center justify-content-center">
+        <div class="col-md-5">
         <div id="accordion">
-          <div class="card" style="width: 24rem;">
+          <div class="card" style="">
             <div class="card-header" id="headingOne">
               <h5 class="mb-0">
                 <button class="btn btn-link card-title" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -231,7 +192,7 @@ tbody tr:nth-child(even) td {
             </div>
           </div>
 
-          <div class="card" style="width: 24rem;">
+          <div class="card" style="">
             <div class="card-header" id="headingTwo">
               <h5 class="mb-0">
                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -259,13 +220,13 @@ tbody tr:nth-child(even) td {
         </div>
 
   <div class="row justify-content-center mt-5">
-    <div class="col-9">
+    <div class="col-md-9">
         <p class=" "><span class="fa fa-angle-right"></span> Las tasas de interés vigentes sobre su crédito son las siguientes:</p>
     </div>
   </div>
 
     <div class="row justify-content-center mt-1">
-    <div class="col-5">
+    <div class="col-md-5">
       <table class="table">
             <thead>
               <tr>
@@ -292,26 +253,25 @@ tbody tr:nth-child(even) td {
   </div>
 
   <div class="row justify-content-center mt-2">
-  <div class="col-9">
+  <div class="col-md-9">
     <p class=""><span class="fa fa-angle-right"></span> La empresa ofrece 7 días calendario de gracia (Cero interés) para el pago de sus planillas, a partir de la fecha convenidad de vencimiento de la planilla.</p>
   </div>
   </div>
 
   <div class="row justify-content-center mt-2">
-  <div class="col-9">
+  <div class="col-md-9">
     <p class=""><span class="fa fa-angle-right"></span> En caso de ser aprobado su crédito, deberá entregar garantías por el doble del monto solicitado:</p>
-  </div>
-  </div>
-
-  <div class="row mt-0">
-  <div class="col-2">
-
-  </div>
-  <div class="col-3">
     <ul>
       <li class="">Cheque</li>
       <li class="">Letra de cambio</li>
     </ul>
+  </div>
+  </div>
+
+  <div class="row mt-0">
+  
+  <div class="col-md-3">
+    
 
   </div>
 
@@ -319,7 +279,7 @@ tbody tr:nth-child(even) td {
   </div>
 
   <div class="row justify-content-center mt-3">
-    <div class="col-9">
+    <div class="col-md-9">
       <p class="lead ">Cualquier inquietud que usted tenga al respecto, estaremos gustosos de atenderle al 02 374 0444 o al correo secretariaempresaslua@hotmail.com.</p>
     </div>
   </div>
